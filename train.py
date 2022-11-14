@@ -1,4 +1,5 @@
-import pandas as pd 
+import pandas as pd
+import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
@@ -23,7 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.2, random
 #################################
 
 # Fit a model on the train section
-regr = RandomForestRegressor(max_depth=2, random_state=seed)
+regr = RandomForestRegressor(max_depth=5, random_state=seed)
 regr.fit(X_train, y_train)
 
 # Report training set score
